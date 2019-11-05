@@ -50,8 +50,9 @@
         <input type="text" name="txtPhone"><br><br>
 
         <input type="submit" value="Send Feedback">
-    </form>
         <input type="button" value="View feedback" onclick="ViewFeedback.php">
+    </form>
+
     <script>
         function chkClicked()
         {
