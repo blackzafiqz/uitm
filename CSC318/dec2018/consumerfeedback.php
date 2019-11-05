@@ -50,7 +50,7 @@
         <input type="text" name="txtPhone"><br><br>
 
         <input type="submit" value="Send Feedback">
-        <input type="button" value="View feedback" onclick="ViewFeedback.php">
+        <input type="button" value="View feedback" onclick="window.location.href='ViewFeedback.php'">
     </form>
 
     <script>
