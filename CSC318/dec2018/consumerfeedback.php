@@ -84,8 +84,9 @@
         
         function verify()
         {
-            var email= document.getElementById("txtEmail").text;
-            var number = document.getElementById("txtPhone").text;
+            var email= document.getElementsByName("txtEmail").text;
+            var number = document.getElementsByName("txtPhone").text;
+            
             
             if(!validateEmail(email))
             {
