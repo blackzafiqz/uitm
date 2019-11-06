@@ -84,8 +84,8 @@
         
         function verify()
         {
-            var email= document.getElementById("txtEmail");
-            var number = document.getElementById("txtPhone")
+            var email= document.getElementById("txtEmail").text;
+            var number = document.getElementById("txtPhone").text;
             
             if(!validateEmail(email))
             {
@@ -103,8 +103,9 @@
         
         function validateEmail(email) 
         {
-            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            return re.test(String(email).toLowerCase());
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailAddr.value))
+                return (true);
+            return (false);
         }
     </script>
   </body>
