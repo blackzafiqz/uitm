@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Consumer Feedback</title>
   </head>
-  
+
   <body>
     <img src="logo.jpg" width="190"><br>
     <br>
@@ -59,7 +59,7 @@
       <br>
       <b>Email Address:</b>
       <hr>
-      <input type="text" name="txtEmail">
+      <input type="text" name="txtEmail" id>
       <br>
       <br>
       <b>Phone Number:</b>
@@ -81,30 +81,36 @@
             else
                 sel.disabled=false;
         }
-        
+
         function verify()
         {
-            var email= document.getElementsByName("txtEmail").text;
-            var number = document.getElementsByName("txtPhone").text;
-            
-            
+            var email= document.getElementsByName("txtEmail")[0].value;
+            var number = document.getElementsByName("txtPhone")[0].value;
+            var name = document.getElementsByName("txtName")[0].value;
+
             if(!validateEmail(email))
             {
                 alert("You entered invalid email!");
                 return;
             }
-            else if(!Number.isInteger(number))
+            else if(isNaN(number))
             {
+
                 alert("You entered invalid phone number!");
                 return;
             }
-            document.getElementById("consumerform").submit();
+            else if(txtName=="")
+            {
+              alert("You entered invalid name!");
+              return;
+            }
+            document.getElementsByName("consumerform")[0].submit();
         }
-                    
-        
-        function validateEmail(email) 
+
+
+        function validateEmail(email)
         {
-            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailAddr.value))
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
                 return (true);
             return (false);
         }
