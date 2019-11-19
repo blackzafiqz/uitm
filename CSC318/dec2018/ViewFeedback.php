@@ -12,7 +12,7 @@
         }
     </style>
   </head>
-  
+
   <body>
     <table style="width: 100%">
       <tr>
@@ -46,7 +46,7 @@
               echo "<td>" . $row[ 'email' ] . "</td>";
               echo "<td>" . $row[ 'phoneno' ] . "</td>";
               echo "<td>" . "<a href='editfeedback.php?id=" . $row[ 'id' ] . "'>Edit</a>" . "</td>";
-              echo "<td>" . "<a href='deletefeedback.php?id=" . $row[ 'id' ] . "'>Delete</a>" . "</td>";
+              echo "<td>" . "<a href='javascript:validate(" . $row[ 'id' ] . ")'>Delete</a>" . "</td>";
 
               echo "</tr>";
 
@@ -58,5 +58,12 @@
         $conn->close();
       ?>
     </table>
+    <script>
+      function validate(id)
+      {
+        if(confirm("Are you sure want to delete this?"))
+          window.location = "deletefeedback.php?id=" + id;
+      }
+    </script>
   </body>
 </html>

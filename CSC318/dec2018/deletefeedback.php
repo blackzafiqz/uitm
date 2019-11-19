@@ -10,11 +10,11 @@ if($stmt = $conn->prepare($sql))
     $stmt->bind_param('i',$id);
     $stmt->execute();
     if($stmt->affected_rows<0)
-        echo "Failed to remove data";
+        phpAlert( "Failed to remove data");
     else
-        echo "Successfull";
+        phpAlert("Successfull");
     $stmt->close();
-    
+
 }
 else
 {
