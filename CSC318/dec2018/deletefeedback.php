@@ -19,7 +19,7 @@ if($stmt = $conn->prepare($sql))
 else
 {
     $error = $conn->errno . ' ' . $conn->error;
-    echo $error;
+    phpAlert($error);
 }
-
+header("Location : ViewFeedback.php");
 ?>

@@ -16,7 +16,7 @@
     <i>This feedback from pertains to ABC restaurants in Malaysia</i> <br>
     <b>Details about your Experience</b>
     <hr>
-    <form name="consumerform" action="addconsumer.php" method="post">
+    <form name="consumerform" action="updatefeedback.php" method="post">
       <select name="optExperience">
         <option selected>Select from List</option>
         <option value="Satisfied">Satisfied</option>
@@ -67,7 +67,7 @@
       <input type="text" name="txtPhone" required value="<?php include'template.php'; echo $phoneno?>">
       <br>
       <br>
-      <input type="button" value="Send Feedback" onClick="verify()">
+      <input type="button" value="Update Feedback" onClick="verify()">
       <input type="button" value="View feedback" onclick="window.location.href='ViewFeedback.php'">
     </form>
     <script>
