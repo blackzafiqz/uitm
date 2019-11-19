@@ -39,11 +39,11 @@
       <br>
       <b>Date of Service:</b>
       <hr>
-      <input type="date" name="dateService">
+      <input type="date" name="dateService" value="<?php include'template.php'; echo $feeddate?>">
       <br>
       <b>Your Feedback:</b>
       <hr>
-      <textarea rows="5" name="txtFeedback" style="width: 100%"></textarea>
+      <textarea rows="5" name="txtFeedback" value="<?php include'template.php'; echo $feedrespond?>" style="width: 100%"></textarea>
       <br>
       Salutation
       <input type="radio" name="radSalutation" value="Mr" required>
@@ -59,12 +59,12 @@
       <br>
       <b>Email Address:</b>
       <hr>
-      <input type="text" name="txtEmail" id required>
+      <input type="text" name="txtEmail" id required value="<?php include'template.php'; echo $email?>">
       <br>
       <br>
       <b>Phone Number:</b>
       <hr>
-      <input type="text" name="txtPhone" required>
+      <input type="text" name="txtPhone" required value="<?php include'template.php'; echo $phoneno?>">
       <br>
       <br>
       <input type="button" value="Send Feedback" onClick="verify()">
