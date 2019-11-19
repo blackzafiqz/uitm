@@ -43,7 +43,7 @@
       <br>
       <b>Your Feedback:</b>
       <hr>
-      <textarea rows="5" name="txtFeedback" value="<?php include'template.php'; echo $feedrespond?>" style="width: 100%"></textarea>
+      <textarea rows="5" name="txtFeedback" style="width: 100%"><?php include'template.php'; echo $feedrespond?></textarea>
       <br>
       Salutation
       <input type="radio" name="radSalutation" value="Mr" required>
