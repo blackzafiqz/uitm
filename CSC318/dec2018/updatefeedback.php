@@ -35,8 +35,9 @@ if($stmt = $conn->prepare($sql))
 else
 {
    $error = $conn->errno . ' ' . $conn->error;
-   echo $error;
+   //echo $error;
 }
+header("Location : ViewFeedback.php");
 //$sql = "INSERT INTO feedback(experience,branch,branch_none,feeddate,feedrespond,salutation,name,email,phoneno)  VALUE('" . $experience ."','". $restaurant ."','". $branch_none ."','". $date ."','". $feedback ."','". $salutation ."','". $name ."','". $email ."','". $phone . "');";
 
 ?>
