@@ -99,7 +99,7 @@
                 alert("You entered invalid phone number!");
                 return;
             }
-            else if(txtName=="")
+            else if(name=="")
             {
               alert("You entered invalid name!");
               return;
