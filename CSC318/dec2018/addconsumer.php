@@ -1,4 +1,4 @@
-<?php
+ q<?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include 'dbconnect.php';
@@ -30,7 +30,7 @@ if($stmt = $conn->prepare($sql))
     else
         echo "Successfull";
     $stmt->close();
-    
+
 }
 else
 {

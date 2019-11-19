@@ -54,7 +54,7 @@
       Miss<br>
       <b>Name:</b>
       <hr>
-      <input type="text" name="txtName" required>
+      <input type="text" name="txtName" value="<?php include'template.php'; echo $name?>" required>
       <br>
       <br>
       <b>Email Address:</b>
